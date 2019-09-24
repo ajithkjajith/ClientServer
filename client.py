@@ -32,14 +32,11 @@ if(i=='2'):
     filename = input()
     s.send(bytes(filename,'utf-8'))
     
-    #data4 = s.recv(1024)
-    
     with open(filename,"rb") as f:
         l=f.read(1024)
   
     
         while (l):
-        
             s.send(bytes(l))
             l=f.read(1024)
     f.close()  
